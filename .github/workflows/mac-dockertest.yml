@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: install docker 
-        run: brew cask install docker
+        run: brew install docker
         
       - name: check docker version
         run: docker version
