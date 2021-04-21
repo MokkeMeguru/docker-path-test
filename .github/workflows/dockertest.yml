@@ -45,8 +45,9 @@ jobs:
         run: |
           cd workspace
           docker-compose build
-          docker-compose run
+          docker-compose run print_memo
           
       - name: stop docker
         run: |
+          cd workspace
           docker-compose down
