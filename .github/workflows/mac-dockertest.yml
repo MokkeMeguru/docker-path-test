@@ -36,7 +36,9 @@ jobs:
           echo test, and deploy your project.
           
       - name: install docker 
-        run: brew install docker
+        run: | 
+          brew install docker
+          eval "$(docker-machine env default)"
         
       - name: check docker version
         run: docker version
