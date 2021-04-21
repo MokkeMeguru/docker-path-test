@@ -37,3 +37,16 @@ jobs:
 
       - name: check docker version
         run: docker version
+        
+      - name: check docker-compose version
+        run: docker-compose version
+        
+      - name: run docker-compose
+        run: |
+          cd workspace
+          docker-compose build
+          docker-compose run
+          
+      - name: stop docker
+        run: |
+          docker-compose down
